@@ -30,3 +30,19 @@ General prefix for cpfspd library is p.
 - all functions start with p_ followed by lower case name.
 - all typedefs start with pT_ followed by lower case name.
 - all defines start with P_ followed by upper case name.
+# Building and Installing
+Using the Terminal (CLI)
+
+You will need:
+
+gcc >= 4.8.0
+
+cmake >= 3.0
+
+    $ git clone https://github.com/leopard02/pfspd.git
+    $ cd pfspd
+    $ mkdir build-$(gcc -dumpmachine)
+    $ cd build-$(gcc -dumpmachine)
+    $ cmake -DCMAKE_BUILD_TYPE=[Release|Debug] ../
+    $ make
+    $ sudo make install
