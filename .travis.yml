@@ -1,0 +1,12 @@
+language: cpp
+
+compiler:
+  - gcc
+
+before_script:
+  - mkdir build-$(gcc -dumpmachine)
+  - cd build-$(gcc -dumpmachine)
+  - cmake ..
+
+script:
+  - make
